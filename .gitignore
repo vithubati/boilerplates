@@ -1,1 +1,2 @@
-terraform/credentails.tfvars
+terraform/credentails.auto.tfvars
+terraform/.terraform
