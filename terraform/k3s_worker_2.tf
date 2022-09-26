@@ -46,6 +46,7 @@ resource "proxmox_vm_qemu" "k3s_worker_2" {
         model  = "virtio"
     }
 
+    ciuser = "bruce"
     
     # VM Cloud-Init Settings
     os_type = "cloud-init"
