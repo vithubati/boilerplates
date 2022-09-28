@@ -1,0 +1,8 @@
+- name: update OS
+  hosts: "*"
+  become: yes
+  tasks:
+    - name: update the os
+      apt:
+        update_cache: yes
+        upgrade: 'yes'
