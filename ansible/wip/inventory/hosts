@@ -9,3 +9,9 @@
 [k3s_cluster:children]
 server
 worker
+
+[pilot]
+10.0.0.120
+
+[drl]
+10.0.0.122
