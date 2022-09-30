@@ -1,0 +1,11 @@
+[server]
+10.0.0.160
+10.0.0.162
+
+[worker]
+10.0.0.170
+10.0.0.172
+
+[k3s_cluster:children]
+server
+worker

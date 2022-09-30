@@ -2,5 +2,5 @@
   hosts: "*"
   become: yes
   tasks:
-  - name: set timezone
-    shell: timedatectl set-timezone America/Toronto
+    - name: set timezone
+      shell: timedatectl set-timezone America/Toronto
