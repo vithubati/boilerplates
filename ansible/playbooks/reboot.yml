@@ -1,6 +1,6 @@
 - name: Reboot hosts
   hosts: "*"
-  become: yes
+  become: true
   tasks:
     - name: Reboot and wait for node to come back up
       reboot:

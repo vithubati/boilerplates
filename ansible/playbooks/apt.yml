@@ -1,6 +1,6 @@
 - name: update OS
   hosts: "*"
-  become: yes
+  become: true
   tasks:
     - name: update the os
       apt:
