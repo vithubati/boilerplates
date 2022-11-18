@@ -50,7 +50,7 @@ resource "proxmox_vm_qemu" "tester_vm" {
     os_type = "cloud-init"
 
     # (Optional) IP Address and Gateway
-    ipconfig0 = "ip=10.0.0.120/24,gw=10.0.0.1"
+    ipconfig0 = "ip=192.168.50.120/24,gw=192.168.50.1"
     # nameserver
 
     # (Optional) SSH KEY

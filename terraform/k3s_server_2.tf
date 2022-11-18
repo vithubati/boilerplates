@@ -52,7 +52,7 @@ resource "proxmox_vm_qemu" "k3s_server_2" {
     os_type = "cloud-init"
 
     # (Optional) IP Address and Gateway
-    ipconfig0 = "ip=10.0.0.162/24,gw=10.0.0.1"
+    ipconfig0 = "ip=192.168.50.162/24,gw=192.168.50.1"
     # nameserver
 
 

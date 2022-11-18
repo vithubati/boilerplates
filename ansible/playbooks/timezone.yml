@@ -1,6 +1,12 @@
 - name: Set timezone and configure timesyncd
-  hosts: "*"
+  hosts: pilot
   become: true
   tasks:
+    - name: getting system timezone
+      shell: "timedatectl status"
+      register: command_output
+      ignore_errors: true
+      
     - name: set timezone
       shell: timedatectl set-timezone America/Toronto
+      when: 'command_output.stdout.find("America/Toronto") == -1'
