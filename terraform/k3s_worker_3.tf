@@ -1,11 +1,13 @@
-# Create a new VM for testing
+# Proxmox Full-Clone
+# ---
+# Create a new VM from a clone
 
-resource "proxmox_vm_qemu" "drl_perf" {
+resource "proxmox_vm_qemu" "k3s_worker_3" {
     
     # VM General Settings
-    name = "drl-perf"
-    desc = "Cars perf vm"
-    vmid = "502"
+    name = "k3s-worker-3"
+    desc = "k3s worker node"
+    vmid = "414"
     target_node = "pve"
     
 
@@ -27,11 +29,11 @@ resource "proxmox_vm_qemu" "drl_perf" {
     cores = 2
     
     # VM Memory Settings
-    memory = 8192
+    memory = 4096
 
   # Setup the disk
     disk {
-        size = "60G"
+        size = "32G"
         type = "scsi"
         storage = "local-lvm"
         ssd = 1
@@ -50,7 +52,7 @@ resource "proxmox_vm_qemu" "drl_perf" {
     os_type = "cloud-init"
 
     # (Optional) IP Address and Gateway
-    ipconfig0 = "ip=192.168.50.122/24,gw=192.168.50.1"
+    ipconfig0 = "ip=192.168.50.174/24,gw=192.168.50.1"
     # nameserver
 
     # (Optional) SSH KEY

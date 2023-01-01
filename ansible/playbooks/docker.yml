@@ -1,5 +1,5 @@
----
-- hosts: drl
+- name: installing docker
+  hosts: pilot
   remote_user: bruce
   become: true
   tasks:
